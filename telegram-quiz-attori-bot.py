@@ -5,7 +5,7 @@ import os
 from flask import Flask, request
 
 TOKEN = '1544405331:AAGeXsgA384zMu3Xfpd-y4nkUFZ0LR4XGeY'
-URL = 'https://dry-thicket-68278.herokuapp.com/' + TOKEN
+URL = 'https://murmuring-tor-01816.herokuapp.com/' + TOKEN
 PATH = os.path.join(os.getcwd(), 'Immagini')
 
 bot = telebot.TeleBot(token = TOKEN, threaded = False)
