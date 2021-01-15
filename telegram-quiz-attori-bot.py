@@ -18,7 +18,7 @@ URL = 'https://telegram-quiz-attori.herokuapp.com/' + TOKEN
 
 server = Flask(__name__)
 
-bot = telebot.TeleBot(token = TOKEN, threaded = True)
+bot = telebot.TeleBot(token = TOKEN, threaded = False)
 bot.remove_webhook()
 
 connessione = connector.connect(host = IP, port = PORTA, user = USER, password = PASSWORD, database = DATABASE)
@@ -104,9 +104,4 @@ def webhook():
 
 def start():
 
-    bot.polling(none_stop=True, interval=0.5)
-
-if __name__ == '__main__':
-    print('ok')
-    server.run(host="0.0.0.0", port=int(os.environ.get('PORT', 5000)))
-    
+    bot.polling(none_stop = True, interval = 0.5)
