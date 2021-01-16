@@ -16,7 +16,7 @@ DATABASE = '5AI.VOGLI'
 TOKEN = '1544405331:AAGeXsgA384zMu3Xfpd-y4nkUFZ0LR4XGeY'
 URL = 'https://telegram-quiz-attori.herokuapp.com/' + TOKEN
 
-server = Flask(__name__)
+#server = Flask(__name__)
 
 bot = telebot.TeleBot(token = TOKEN, threaded = False)
 bot.remove_webhook()
@@ -85,7 +85,7 @@ def chat_message(message):
     cursore.execute('insert into risposta values(null, "{}", "{}", "{}")'.format(data, ora, message.text))
 
     connessione.commit()
-
+'''
 @server.route('/{}'.format(TOKEN), methods=['POST'])
 def getMessage():
 
@@ -101,7 +101,7 @@ def webhook():
     bot.set_webhook(url = URL)
     
     return "!", 200
-
+'''
 def start():
 
     bot.polling(none_stop = True, interval = 0.5)
