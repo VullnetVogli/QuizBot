@@ -32,10 +32,10 @@ aiuto = ''
 @bot.message_handler(commands = ['start', 'help'])
 def help(message):
 
-    bot.send_message(message.chat.id, 'Scrivi /newQuiz per ricevere una nuova immagine da indovinare.\nScrivi /hint per un indizio')
+    bot.send_message(message.chat.id, 'Scrivi /quiz per ricevere una nuova immagine da indovinare.\nScrivi /hint per un indizio')
 
-@bot.message_handler(commands = ['newQuiz'])
-def newQuizz(message):
+@bot.message_handler(commands = ['quiz'])
+def quizz(message):
 
     global idQuiz, nome, aiuto
 
@@ -70,7 +70,7 @@ def chat_message(message):
 
         if nome in message.text:
 
-            bot.send_message(text = 'Bravo! /newQuiz', chat_id = message.chat.id)
+            bot.send_message(text = 'Bravo! /quiz', chat_id = message.chat.id)
 
         else:
 
@@ -78,7 +78,7 @@ def chat_message(message):
     
     else:
 
-        bot.send_message(text = 'Per giocare scrivi: /newQuiz.', chat_id = message.chat.id)
+        bot.send_message(text = 'Per giocare scrivi: /quiz.', chat_id = message.chat.id)
 
     data, ora = str(datetime.utcfromtimestamp(message.date)).split()
 
