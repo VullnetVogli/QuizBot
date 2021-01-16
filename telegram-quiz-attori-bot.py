@@ -105,3 +105,8 @@ def webhook():
 def start():
 
     bot.polling(none_stop = True, interval = 0.5)
+
+if __name__ == '__main__':
+    
+    start()
+    
