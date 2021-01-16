@@ -68,7 +68,7 @@ def chat_message(message):
     
     if idQuiz != -1:
 
-        if nome in message.text:
+        if nome in message.text.lower():
 
             bot.send_message(text = 'Bravo! /quiz', chat_id = message.chat.id)
 
