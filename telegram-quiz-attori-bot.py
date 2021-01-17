@@ -2,7 +2,7 @@ from flask import Flask, request
 import telebot
 from mysql import connector
 from random import randint
-from datetime import *
+from datetime import datetime
 import os
 
 
